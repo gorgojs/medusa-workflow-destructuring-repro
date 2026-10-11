@@ -1,0 +1,24 @@
+{
+  "name": "medusa-workflow-destructuring-repro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal reproduction of extra deep copies in Medusa v2 workflows when a step or transform result is destructured or passed inside an object literal.",
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "packageManager": "yarn@4.9.2",
+  "scripts": {
+    "bench": "tsx --expose-gc bench/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@medusajs/cli": "2.21.1",
+    "@medusajs/framework": "2.21.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
